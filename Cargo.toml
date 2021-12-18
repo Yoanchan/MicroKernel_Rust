@@ -1,0 +1,53 @@
+[package]
+name = "Microkernel"
+version = "0.1.0"
+authors = ["Yoanchan <49086971+Yoanchan@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+spin = "0.7.0"
+bootloader = { version = "0.9.11", features = ["map_physical_memory"]}
+log = "0.4.11"
+volatile = "0.2.6"
+x86_64 = "0.13.1"
+bitflags = "1.2.1"
+bit_field = "0.10.1"
+pic8259_simple = "0.2.0"
+pc-keyboard = "0.5.1"
+linked_list_allocator = "0.8.10"
+uart_16550 = "0.2.10"
+cmos = "0.1.2"
+integer-sqrt = "0.1.5"
+array-init = "1.0.0"
+
+[dependencies.arraydeque]
+version = "0.4.5"
+default-features = false
+
+[dependencies.either]
+version = "1.6.1"
+default-features = false
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
+
+[dependencies.crossbeam-queue]
+version = "0.2.1"
+default-features = false
+features = ["alloc"]
+
+[dependencies.conquer-once]
+version = "0.2.0"
+default-features = false
+
+[dependencies.futures-util]
+version = "0.3.4"
+default-features = false
+features = ["alloc"]
+
+[dependencies.num-traits]
+version = "^0.2"
+default-features = false
